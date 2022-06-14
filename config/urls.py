@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')), # new
+    path('accounts/', include('accounts.urls')),
     path('', include('blog.urls')), # URL requests will be rerouted to blogsURLS for directions
 ]
